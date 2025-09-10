@@ -107,8 +107,8 @@ uint256 strikeX18 = 0.35 * 10**18; // $0.35 with 18 decimals
 uint8 comparator = 3; // Greater than
 uint8 settleType = 0; // Price at exact end time
 uint48 endTs = uint48(block.timestamp + 48 hours);
-address stakeToken = 0xBABb63993aDaeaee446dDf5156598f0bae1c298A; // MUSD token
-uint256 creatorStake = 150 * 10**18; // 150 MUSD
+address stakeToken = 0x0000000000000000000000000000000000000000; // Native MON token
+uint256 creatorStake = 150 * 10**18; // 150 MON
 address adapter = address(0); // No custom adapter
 bytes memory adapterData = ""; // No adapter data
 
@@ -132,10 +132,10 @@ MemewarsV2(memewarsAddress).createMarket(
 ### Joining a Market
 
 ```solidity
-// Example: Join market #11 on the YES side with 100 MUSD
+// Example: Join market #11 on the YES side with 100 MON
 uint256 marketId = 11;
 uint8 side = 0; // 0 for YES, 1 for NO
-uint256 amount = 100 * 10**18; // 100 MUSD
+uint256 amount = 100 * 10**18; // 100 MON
 
 // Get market info to determine stake token
 MemewarsV2.Market memory market = MemewarsV2(memewarsAddress).markets(marketId);
@@ -211,6 +211,8 @@ The contract uses custom errors for better gas efficiency and clearer error mess
 - **SafeERC20**: Safe token transfer handling
 
 ## Contract Deployment
+
+**Contract Address**: `0xb1433b662669f59de53f96c2959b542a57bbb204`
 
 The MemeWars V2 contract requires two parameters during deployment:
 
