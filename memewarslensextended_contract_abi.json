@@ -1,0 +1,510 @@
+[
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "_core",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "constructor"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "fromId",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "count",
+                "type": "uint256"
+            }
+        ],
+        "name": "getClosedMarkets",
+        "outputs": [
+            {
+                "components": [
+                    {
+                        "internalType": "uint256",
+                        "name": "marketId",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "address",
+                        "name": "creator",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "bytes32",
+                        "name": "priceId",
+                        "type": "bytes32"
+                    },
+                    {
+                        "internalType": "address",
+                        "name": "stakeToken",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "address",
+                        "name": "adapter",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "uint48",
+                        "name": "startTs",
+                        "type": "uint48"
+                    },
+                    {
+                        "internalType": "uint48",
+                        "name": "endTs",
+                        "type": "uint48"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "strikeX18",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "poolYes",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "poolNo",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "weightYes",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "weightNo",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint32",
+                        "name": "yesUserCount",
+                        "type": "uint32"
+                    },
+                    {
+                        "internalType": "uint32",
+                        "name": "noUserCount",
+                        "type": "uint32"
+                    },
+                    {
+                        "internalType": "enum IMemewarsV2.MarketStatus",
+                        "name": "status",
+                        "type": "uint8"
+                    },
+                    {
+                        "internalType": "uint8",
+                        "name": "stakeTokenDecimals",
+                        "type": "uint8"
+                    },
+                    {
+                        "internalType": "bool",
+                        "name": "joinable",
+                        "type": "bool"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "timeUntilEnd",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "timeUntilJoinClose",
+                        "type": "uint256"
+                    }
+                ],
+                "internalType": "struct MemewarsLensExtended.MarketView[]",
+                "name": "",
+                "type": "tuple[]"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "fromId",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "count",
+                "type": "uint256"
+            }
+        ],
+        "name": "getOpenMarkets",
+        "outputs": [
+            {
+                "components": [
+                    {
+                        "internalType": "uint256",
+                        "name": "marketId",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "address",
+                        "name": "creator",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "bytes32",
+                        "name": "priceId",
+                        "type": "bytes32"
+                    },
+                    {
+                        "internalType": "address",
+                        "name": "stakeToken",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "address",
+                        "name": "adapter",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "uint48",
+                        "name": "startTs",
+                        "type": "uint48"
+                    },
+                    {
+                        "internalType": "uint48",
+                        "name": "endTs",
+                        "type": "uint48"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "strikeX18",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "poolYes",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "poolNo",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "weightYes",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "weightNo",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint32",
+                        "name": "yesUserCount",
+                        "type": "uint32"
+                    },
+                    {
+                        "internalType": "uint32",
+                        "name": "noUserCount",
+                        "type": "uint32"
+                    },
+                    {
+                        "internalType": "enum IMemewarsV2.MarketStatus",
+                        "name": "status",
+                        "type": "uint8"
+                    },
+                    {
+                        "internalType": "uint8",
+                        "name": "stakeTokenDecimals",
+                        "type": "uint8"
+                    },
+                    {
+                        "internalType": "bool",
+                        "name": "joinable",
+                        "type": "bool"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "timeUntilEnd",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "timeUntilJoinClose",
+                        "type": "uint256"
+                    }
+                ],
+                "internalType": "struct MemewarsLensExtended.MarketView[]",
+                "name": "",
+                "type": "tuple[]"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "fromId",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "count",
+                "type": "uint256"
+            }
+        ],
+        "name": "getSettledMarkets",
+        "outputs": [
+            {
+                "components": [
+                    {
+                        "internalType": "uint256",
+                        "name": "marketId",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "address",
+                        "name": "creator",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "bytes32",
+                        "name": "priceId",
+                        "type": "bytes32"
+                    },
+                    {
+                        "internalType": "address",
+                        "name": "stakeToken",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "address",
+                        "name": "adapter",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "uint48",
+                        "name": "startTs",
+                        "type": "uint48"
+                    },
+                    {
+                        "internalType": "uint48",
+                        "name": "endTs",
+                        "type": "uint48"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "strikeX18",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "poolYes",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "poolNo",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "weightYes",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "weightNo",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint32",
+                        "name": "yesUserCount",
+                        "type": "uint32"
+                    },
+                    {
+                        "internalType": "uint32",
+                        "name": "noUserCount",
+                        "type": "uint32"
+                    },
+                    {
+                        "internalType": "enum IMemewarsV2.MarketStatus",
+                        "name": "status",
+                        "type": "uint8"
+                    },
+                    {
+                        "internalType": "uint8",
+                        "name": "stakeTokenDecimals",
+                        "type": "uint8"
+                    },
+                    {
+                        "internalType": "bool",
+                        "name": "joinable",
+                        "type": "bool"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "timeUntilEnd",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "timeUntilJoinClose",
+                        "type": "uint256"
+                    }
+                ],
+                "internalType": "struct MemewarsLensExtended.MarketView[]",
+                "name": "",
+                "type": "tuple[]"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "fromId",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "count",
+                "type": "uint256"
+            }
+        ],
+        "name": "getVoidedMarkets",
+        "outputs": [
+            {
+                "components": [
+                    {
+                        "internalType": "uint256",
+                        "name": "marketId",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "address",
+                        "name": "creator",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "bytes32",
+                        "name": "priceId",
+                        "type": "bytes32"
+                    },
+                    {
+                        "internalType": "address",
+                        "name": "stakeToken",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "address",
+                        "name": "adapter",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "uint48",
+                        "name": "startTs",
+                        "type": "uint48"
+                    },
+                    {
+                        "internalType": "uint48",
+                        "name": "endTs",
+                        "type": "uint48"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "strikeX18",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "poolYes",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "poolNo",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "weightYes",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "weightNo",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint32",
+                        "name": "yesUserCount",
+                        "type": "uint32"
+                    },
+                    {
+                        "internalType": "uint32",
+                        "name": "noUserCount",
+                        "type": "uint32"
+                    },
+                    {
+                        "internalType": "enum IMemewarsV2.MarketStatus",
+                        "name": "status",
+                        "type": "uint8"
+                    },
+                    {
+                        "internalType": "uint8",
+                        "name": "stakeTokenDecimals",
+                        "type": "uint8"
+                    },
+                    {
+                        "internalType": "bool",
+                        "name": "joinable",
+                        "type": "bool"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "timeUntilEnd",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "timeUntilJoinClose",
+                        "type": "uint256"
+                    }
+                ],
+                "internalType": "struct MemewarsLensExtended.MarketView[]",
+                "name": "",
+                "type": "tuple[]"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "memewars",
+        "outputs": [
+            {
+                "internalType": "contract IMemewarsV2",
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    }
+]
