@@ -48,6 +48,9 @@ interface IMemewarsV2 {
         );
 
     function joinCloseTime(uint256 marketId) external view returns (uint48);
+
+    function nextMarketId() external view returns (uint256);
+
 }
 
 /**
@@ -244,4 +247,7 @@ contract MemewarsLensExtended {
             return (false, mv);
         }
     }
+    function latestMarketId() external view returns (uint256) {
+        return memewars.nextMarketId();
+    }    
 }
